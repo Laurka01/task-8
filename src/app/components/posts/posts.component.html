@@ -1,0 +1,9 @@
+<div class="mypost" *ngFor="let Post of Posts">
+    <p class="posttitle">Post {{Post.id}}: {{Post.title}}</p>
+    
+    <p class="postsp">{{Post.body}}</p>
+    <div class="mycomment" *ngFor="let Comment of Comments">
+        <p *ngIf="Post.id === Comment.postId">{{Comment.body}}</p>
+    </div>
+</div>
+
